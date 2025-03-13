@@ -3,11 +3,16 @@ import { Link } from 'react-router-dom'
 import logo from '../assets/logoW.png'
 import logoText from '../assets/logoWhite.png'
 
+
 function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
+  const handleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen)
+  }
+
   return (
-    <div className='bg-gray-800 text-white '>
+    <div className='absolute top-0 right-0 left-0 bg-gray-800 text-white '>
       <nav className='mx-auto flex max-w-7xl items-center justify-between p-4 md:px-8  lg:p-6'>
         
         {/* Logo section */}
@@ -20,7 +25,7 @@ function Header() {
         </div>
 
         {/* Hamburger-menu */}
-        <div class="flex md:hidden" onClick={() => console.log('clicked')}>
+        <div class="flex md:hidden" onClick={handleMobileMenu}>
           <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
             <span class="sr-only">Open main menu</span>
             <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="white" aria-hidden="true" data-slot="icon">

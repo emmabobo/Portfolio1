@@ -1,7 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 import Header from './Components/Header';
+import Hero from './Components/Hero';
+import About from './Components/About';
+
+
 
 
 
@@ -11,12 +16,11 @@ function App() {
     <Router>
       
       <Header />
-      {/* <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes> */}
+      <Routes>
+        <Route path='/' element={<Hero />} />
+        <Route path='/about' element={<About />} />
+      </Routes>
+    
     </Router>
   )
 }
