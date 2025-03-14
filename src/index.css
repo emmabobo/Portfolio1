@@ -1,11 +1,16 @@
 @import "tailwindcss";
 
-@theme{
-    
-}
-
-@extend{
-    backgroundImage:{
-        hero:'url('../src/assets/hero.jpg')'
+@layer components {
+    .bg-mob {
+        background-image: url('../src/assets/Hero1.png'); 
+        
     }
-}
+    
+    .bg-all {
+        background-image: url('../src/assets/Hero.png'); 
+      
+    }
+
+    
+    
+  }

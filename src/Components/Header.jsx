@@ -23,8 +23,8 @@ function Header() {
 
 
   return (
-    <div className='absolute top-0 right-0 left-0 bg-gray-800 text-white '>
-      <nav className='mx-auto flex max-w-7xl items-center justify-between p-4 md:px-8  lg:p-6'>
+    <div className='absolute top-0 right-0 left-0  text-white '>
+      <nav className=' border-2 mx-auto flex max-w-7xl items-center justify-between p-4 md:px-8  lg:p-6'>
         
         {/* Logo section */}
         <div onClick={handleMobileMenu} className="flex lg:flex-1">
