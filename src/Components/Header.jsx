@@ -10,11 +10,11 @@ function Header() {
   const handleMobileMenu = () => {
     // Get the element by its ID (replace 'yourElementId' with the actual ID)
     const elementId = document.getElementById('navLink');
-    if (mobileMenuOpen){
-      elementId.classList.add('hidden');
+    if (mobileMenuOpen) {
+      elementId.classList.remove('hidden');
     }
     else{
-      elementId.classList.remove('hidden');
+      elementId.classList.add('hidden');
     }
 
     setMobileMenuOpen(!mobileMenuOpen);
@@ -23,8 +23,8 @@ function Header() {
 
 
   return (
-    <div className='absolute top-0 right-0 left-0  text-white '>
-      <nav className=' border-2 mx-auto flex max-w-7xl items-center justify-between p-4 md:px-8  lg:p-6'>
+    <div className='sticky top-0 right-0 left-0 font-inter bg-black bluegradient'>
+      <nav className=' mx-auto flex max-w-7xl items-center justify-between p-4 md:px-8  lg:p-6'>
         
         {/* Logo section */}
         <div onClick={handleMobileMenu} className="flex lg:flex-1">
@@ -33,6 +33,14 @@ function Header() {
             <img className="h-8 w-auto lg:hidden " src={logo} alt="" />
             <img className='h-5 w-auto hidden lg:block' src={logoText} alt='' />
           </Link>
+        </div>
+
+         {/* Menu Items*/}
+         <div id='navLink' className='hidden  bg-black absolute top-15 left-0 right-0 h-screen items-center text-center  text-white   p-8 text-2xl flex flex-col gap-8 md:top-0 md:flex md:relative md:flex-row md:text-2xl  md:p-2 md:pl-6'>
+          <Link to='/' onClick={handleMobileMenu} className='w-full border-b-4 pb-3  hover:text-blue-600  hover:-translate-y-1 transition-all' >Home</Link>
+          <Link to='/about' onClick={handleMobileMenu} className='w-full border-b-4 pb-3 hover:text-blue-600  hover:-translate-y-1 transition-all'>About</Link>
+          <Link to='/Projects' onClick={handleMobileMenu} className='w-full border-b-4 pb-3 hover:text-blue-600  hover:-translate-y-1 transition-all'>Projects</Link>
+          <Link to='/contact' onClick={handleMobileMenu} className=' w-full border-b-4 pb-3 hover:text-blue-600 hover:-translate-y-1 transition-all'>Contact</Link>
         </div>
 
         {/* Hamburger-menu */}
@@ -45,13 +53,7 @@ function Header() {
           </button>
         </div>
 
-        {/* Menu Items*/}
-        <div id='navLink' onClick={handleMobileMenu} className=' absolute top-15 left-0 right-0 h-fit items-center rounded-md  p-8 text-5xl flex flex-col gap-8 bg-gray-700 md:top-0 md:flex md:relative md:flex-row md:text-2xl  md:p-2 md:pl-6 md:rounded-tl-full'>
-          <Link to='/' onClick={handleMobileMenu} className='active:bg-black hover:text-red-500' >Home</Link>
-          <Link to='/about' onClick={handleMobileMenu} className='active:bg-black hover:text-red-500'>About</Link>
-          <Link to='/services' onClick={handleMobileMenu} className='active:bg-black hover:text-red-500'>Services</Link>
-          <Link to='/contact' onClick={handleMobileMenu} className='active:bg-black hover:text-red-500'>Contact</Link>
-        </div>
+       
 
 
       </nav>

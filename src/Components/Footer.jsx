@@ -5,7 +5,7 @@ const Footer = () => {
     const date = new Date().getFullYear();
    
     return (
-        <footer className="absolute bottom-0 right-0 left-0  text-white ">
+        <footer className=" text-white ">
             <div className=" mx-auto flex flex-col max-w-7xl items-center justify-center ">
                 <div className='flex gap-4 p-4'>
                     <Link to="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
