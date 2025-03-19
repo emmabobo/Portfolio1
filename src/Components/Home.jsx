@@ -1,7 +1,7 @@
 import React from 'react'
 import Hero from './Hero'
 
-function About() {
+function Home() {
   return (
     <div>
         <div>
@@ -13,4 +13,4 @@ function About() {
   )
 }
 
-export default About
+export default Home

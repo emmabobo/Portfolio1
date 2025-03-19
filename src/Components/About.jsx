@@ -6,8 +6,9 @@ import HeroImg from '../assets/Heroimg.jpg'
 function About() {
 
   return (
+    
     <div className=' mx-auto max-w-7xl p-4 min-h-screen bg-black text-white lg:pt-0  '>
-
+      
       <div className=''>
         
         <div  className=' rounded-xl border-white/10 border  flex flex-col-reverse items-center justify-center p-2  md:flex-row md:gap-6 md:p-8  md:col-span-2 lg:justify-between lg:p-2'>
@@ -112,8 +113,10 @@ function About() {
 
           </div>
         </div>
+      
       </div>
     </div>
+    
   )
 }
 
