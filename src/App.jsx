@@ -9,6 +9,7 @@ import Contact from './Components/Contact';
 import Projects from './Components/Projects';
 
 import Footer from './Components/Footer';
+import Home from './Components/Home';
 
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
         <Header />
         
         <Routes>
-          <Route path='/' element={<About />} />
+          <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
           <Route path='/projects' element={<Projects />} />
           <Route path='/contact' element={<Contact />} />
