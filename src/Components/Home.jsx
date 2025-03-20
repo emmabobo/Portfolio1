@@ -5,12 +5,16 @@ function Home() {
   return (
     <div>
         <div>
-            <Hero />
+            <div>
+              <div>
+
+              </div>
+            </div>
         </div>
 
         
     </div>
   )
-}
+} 
 
 export default Home
