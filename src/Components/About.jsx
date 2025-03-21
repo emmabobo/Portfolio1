@@ -7,7 +7,7 @@ function About() {
 
   return (
     
-    <div className=' mx-auto max-w-7xl p-4 min-h-screen bg-black text-white lg:pt-0  '>
+    <div className=' md:absolute md:top-o left-0 right-0   border-2 mx-auto max-w-7xl p-4 min-h-screen bg-black text-white lg:pt-0  '>
       
       <div className=''>
         

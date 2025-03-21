@@ -4,6 +4,8 @@ import logo from '../assets/logoW.png'
 import logoText from '../assets/logoWhite.png'
 
 
+
+
 function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
@@ -30,8 +32,8 @@ function Header() {
 
 
   return (
-    <div className='sticky top-0 right-0 left-0 font-inter bg-black bluegradient'>
-      <nav className=' mx-auto flex max-w-7xl items-center justify-between p-4 md:px-8  lg:p-6'>
+    <div className='relative  bg-black top-0 right-0 left-0  h-15 md:h-20   '>
+      <nav className='border-2 h-full mx-auto flex max-w-7xl items-center justify-between p-4 md:p-0 '>
         
         {/* Logo section */}
         <div onClick={handleMobileMenu} className="flex lg:flex-1">
@@ -43,8 +45,11 @@ function Header() {
         </div>
 
          {/* Menu Items*/}
-         <div id='navLink' className='hidden  bg-black absolute top-15 left-0 right-0 h-screen items-center text-center  text-white   p-8 text-2xl flex flex-col gap-8 md:top-0 md:flex md:relative md:flex-row md:text-2xl md:h-0  md:p-2 md:pl-6'>
-          <Link to='/' onClick={handleMobileMenu} className='w-full border-b-4 pb-3  hover:text-blue-600  hover:-translate-y-1 transition-all md:border-none md:pb-0' >Home</Link>
+         <div id='navLink' className='hidden bg-black absolute top-15 left-0 right-0 h-[90vh] items-center text-center  text-white   p-8 text-2xl flex flex-col gap-8 md:top-0 md:flex md:relative md:flex-row md:text-2xl md:h-0  md:p-2 md:pl-6'>
+        
+
+
+           <Link to='/' onClick={handleMobileMenu} className='w-full border-b-4 pb-3  hover:text-blue-600  hover:-translate-y-1 transition-all md:border-none md:pb-0' >Home</Link>
           <Link to='/about' onClick={handleMobileMenu} className='w-full border-b-4 pb-3 hover:text-blue-600  hover:-translate-y-1 transition-all md:border-none md:pb-0 '>About</Link>
           <Link to='/Projects' onClick={handleMobileMenu} className='w-full border-b-4 pb-3 hover:text-blue-600  hover:-translate-y-1 transition-all md:border-none md:pb-0'>Projects</Link>
           <Link to='/contact' onClick={handleMobileMenu} className=' w-full border-b-4 pb-3 hover:text-blue-600 hover:-translate-y-1 transition-all md:border-none md:pb-0'>Contact</Link>
